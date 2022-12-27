@@ -26,7 +26,7 @@ const CommentForm = ({campsiteId}) => {
         console.log(comment);
         setModalOpen(false);
     
-    };  
+    };
     
     return(
         <>
