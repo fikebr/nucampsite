@@ -9,22 +9,19 @@ import ContactPage from './pages/ContactPage';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <Header />
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='contact' element={<ContactPage />} />
-        <Route
-          path='directory/:campsiteId'
-          element={<CampsiteDetailPage />}
-        />
-        <Route path='directory' element={<CampsitesDirectoryPage />} />
-        <Route path='about' element={<AboutPage />} />
-      </Routes>
-      <Footer />
-    </div>
-  );
+        return (
+                <div className="App">
+                        <Header />
+                        <Routes>
+                                <Route path="/" element={<HomePage />} />
+                                <Route path="contact" element={<ContactPage />} />
+                                <Route path="directory/:campsiteId" element={<CampsiteDetailPage />} />
+                                <Route path="directory" element={<CampsitesDirectoryPage />} />
+                                <Route path="about" element={<AboutPage />} />
+                        </Routes>
+                        <Footer />
+                </div>
+        );
 }
 
 export default App;

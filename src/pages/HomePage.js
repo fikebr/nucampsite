@@ -2,14 +2,12 @@ import { Container } from 'reactstrap';
 import DisplayList from '../features/display/DisplayList';
 import SubHeader from '../components/SubHeader';
 
-const HomePage = () => {
-    return (
+const HomePage = () => (
         <Container>
-            <SubHeader current='Home' />
+                <SubHeader current="Home" />
 
-            <DisplayList />
+                <DisplayList />
         </Container>
-    );
-};
+);
 
 export default HomePage;

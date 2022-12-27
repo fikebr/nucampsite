@@ -1,9 +1,5 @@
 import { PARTNERS } from '../../app/shared/PARTNERS';
 
-export const selectAllPartners = () => { 
-    return PARTNERS;
-};
+export const selectAllPartners = () => PARTNERS;
 
-export const selectFeaturedPartner = () => {
-    return PARTNERS.find((partner) => partner.featured);
-};
+export const selectFeaturedPartner = () => PARTNERS.find((partner) => partner.featured);

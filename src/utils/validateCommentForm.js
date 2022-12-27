@@ -1,13 +1,13 @@
 export const validateCommentForm = (values) => {
-    const errors = {};
+        const errors = {};
 
-    if (!values.rating) {
-        errors.rating = "Required";
-    }
+        if (!values.rating) {
+                errors.rating = 'Required';
+        }
 
-    if (values.author.length < 2 || values.author.length > 15) {
-        errors.author = "Must be 2-15 characters long."
-    }
+        if (values.author.length < 2 || values.author.length > 15) {
+                errors.author = 'Must be 2-15 characters long.';
+        }
 
-    return errors;
+        return errors;
 };
