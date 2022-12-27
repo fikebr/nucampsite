@@ -1,32 +1,27 @@
 export const validateContactForm = (values) => {
     const errors = {};
-    if (!values.firstName) {
+    const { firstName, lastName, phoneNum, email } = values;
+
+    if (!firstName) {
         errors.firstName = 'Required';
     }
-    else if (values.firstName.length < 2) {
-        errors.firstName = 'Must be at least 2 characters.';
-    }
-    else if (values.firstName.length > 15) {
-        errors.firstName = 'Must be no more than 15 characters.';
+    else if (firstName.length < 2 || firstName.length > 15) {
+        errors.firstName = 'Must be 2-15 characters.';
     }
 
-    if (!values.lastName) {
+    if (!lastName) {
         errors.lastName = 'Required';
     }
-    else if (values.lastName.length < 2) {
-        errors.lastName = 'Must be at least 2 characters.';
-    }
-    else if (values.lastName.length > 15) {
-        errors.lastName = 'Must be no more than 15 characters.';
+    else if (lastName.length < 2 || lastName.length > 15) {
+        errors.lastName = 'Must be 2-15 characters.';
     }
 
-    const reg = /^\d+$/;
-    if (!reg.test(values.phoneNum)) {
+    if (phoneNum && !/^\d+$/.test(phoneNum)) {
         errors.phoneNum = 'The phone number should contain only numbers.';
     }
-
-    if (!values.email.includes('@')) {
-        errors.email = 'Email should contain a @';
+    
+    if (email && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(email)) {
+        errors.email = 'Invalid email address';
     }
 
     return errors;
