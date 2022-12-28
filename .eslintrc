@@ -3,7 +3,8 @@
     "wesbos"
   ],
   "rules": {
-    "no-console": 0,
+    "react/prop-types": 0,
+    "no-promise-executor-return": 0,
     "arrow-body-style": [
       "error",
       "as-needed"
@@ -14,7 +15,7 @@
         "trailingComma": "es5",
         "singleQuote": true,
         "printWidth": 120,
-        "tabWidth": 4,
+        "tabWidth": 8
       }
     ]
   }
