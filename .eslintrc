@@ -1,17 +1,21 @@
 {
-    "extends": [
-      "wesbos"
+  "extends": [
+    "wesbos"
+  ],
+  "rules": {
+    "no-console": 0,
+    "arrow-body-style": [
+      "error",
+      "as-needed"
     ],
-    "rules": {
-      "no-console": 2,
-      "prettier/prettier": [
-        "error",
-        {
-          "trailingComma": "es5",
-          "singleQuote": true,
-          "printWidth": 120,
-          "tabWidth": 8,
-        }
-      ]
-    }
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "printWidth": 120,
+        "tabWidth": 4,
+      }
+    ]
   }
+}
