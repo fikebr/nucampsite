@@ -32,7 +32,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "json-server": "json-server -H 0.0.0.0 --watch E:/Dropbox/Dev/Projects/NucampFolder/json-server/db.json -p 3001 -d 2000"
   },
   "browserslist": {
     "production": [
