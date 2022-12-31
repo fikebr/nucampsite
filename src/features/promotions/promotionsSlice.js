@@ -2,14 +2,17 @@ import { createSlice } from '@reduxjs/toolkit';
 import { PROMOTIONS } from '../../app/shared/PROMOTIONS';
 
 const initialState = {
-        promotionsArray: PROMOTIONS,
+    promotionsArray: PROMOTIONS,
 };
 
 const promotionSlice = createSlice({
-        name: 'promotions',
-        initialState,
+    name: 'promotions',
+    initialState,
 });
 export const promotionsReducer = promotionSlice.reducer;
 
-export const selectFeaturedPromotion = (state) =>
-        state.promotions.promotionsArray.find((promotion) => promotion.featured);
+export const selectFeaturedPromotion = (state) => {
+    return state.promotions.promotionsArray.find((promotion) => {
+        return promotion.featured;
+    });
+};

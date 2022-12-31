@@ -12,24 +12,24 @@ import { fetchCampsites } from './features/campsites/campsitesSlice';
 import './App.css';
 
 function App() {
-        const dispatch = useDispatch();
-        useEffect(() => {
-                dispatch(fetchCampsites());
-        }, [dispatch]);
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(fetchCampsites());
+    }, [dispatch]);
 
-        return (
-                <div className="App">
-                        <Header />
-                        <Routes>
-                                <Route path="/" element={<HomePage />} />
-                                <Route path="contact" element={<ContactPage />} />
-                                <Route path="directory/:campsiteId" element={<CampsiteDetailPage />} />
-                                <Route path="directory" element={<CampsitesDirectoryPage />} />
-                                <Route path="about" element={<AboutPage />} />
-                        </Routes>
-                        <Footer />
-                </div>
-        );
+    return (
+        <div className="App">
+            <Header />
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="contact" element={<ContactPage />} />
+                <Route path="directory/:campsiteId" element={<CampsiteDetailPage />} />
+                <Route path="directory" element={<CampsitesDirectoryPage />} />
+                <Route path="about" element={<AboutPage />} />
+            </Routes>
+            <Footer />
+        </div>
+    );
 }
 
 export default App;
