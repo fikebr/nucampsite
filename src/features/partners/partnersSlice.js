@@ -43,8 +43,18 @@ export const selectAllPartners = (state) => {
     return state.partners.partnersArray;
 };
 
-export const selectFeaturedPartner = (state) => {
+export const selectFeaturedPartnerold = (state) => {
     return state.partners.partnersArray.find((partner) => {
         return partner.featured;
     });
+};
+
+export const selectFeaturedPartner = (state) => {
+    return {
+        featuredItem: state.partners.partnersArray.find((partner) => {
+            return partner.featured;
+        }),
+        isLoading: state.partners.isLoading,
+        errMsg: state.partners.errMsg,
+    };
 };
