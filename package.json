@@ -33,7 +33,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "json-server": "json-server -H 0.0.0.0 --watch E:/Dropbox/Dev/Projects/NucampFolder/json-server/db.json --static E:/Dropbox/Dev/Projects/NucampFolder/json-server/public/ -p 3001 -d 2000"
+    "json-server": "E:/Dropbox/Dev/Projects/NucampFolder/json-server/start-json-server.bat"
   },
   "browserslist": {
     "production": [
